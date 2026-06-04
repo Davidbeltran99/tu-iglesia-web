@@ -182,13 +182,28 @@ p { color: #4a444e; }
     radial-gradient(circle at 85% 78%, rgba(208,21,95,0.30), transparent 52%),
     linear-gradient(160deg, #2a1a22 0%, #1c141a 55%, #140f14 100%);
 }
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  /* Desenfoque suave: el video queda como fondo atmosférico y el título resalta */
+  filter: blur(5px) saturate(1.05) brightness(0.92);
+  transform: scale(1.08); /* evita que se vean los bordes del desenfoque */
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 60% 40%, rgba(225,33,40,0.18), transparent 55%);
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(18,13,18,0.92) 0%, rgba(18,13,18,0.74) 48%, rgba(18,13,18,0.62) 100%),
+    radial-gradient(circle at 72% 45%, rgba(225,33,40,0.12), transparent 60%);
   pointer-events: none;
 }
-.hero-content { position: relative; max-width: 760px; padding-block: 120px; }
+.hero-content { position: relative; z-index: 2; max-width: 760px; padding-block: 120px; }
 .hero-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.32em;
@@ -219,6 +234,7 @@ p { color: #4a444e; }
   bottom: 28px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
   width: 26px; height: 42px;
   border: 2px solid rgba(255,255,255,0.5);
   border-radius: 14px;
