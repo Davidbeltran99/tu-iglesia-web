@@ -51,7 +51,16 @@ const server = http.createServer((req, res) => {
       return;
     }
     const ext = path.extname(safePath).toLowerCase();
-    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    // HTML/CSS/JS siempre frescos (para que los cambios se vean al instante).
+    // Imágenes y fuentes se cachean un día.
+    const noCache = [".html", ".css", ".js", ".json"];
+    const cacheControl = noCache.includes(ext)
+      ? "no-cache"
+      : "public, max-age=86400";
+    res.writeHead(200, {
+      "Content-Type": MIME[ext] || "application/octet-stream",
+      "Cache-Control": cacheControl,
+    });
     res.end(data);
   });
 });
