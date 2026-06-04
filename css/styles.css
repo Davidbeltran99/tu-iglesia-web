@@ -105,12 +105,13 @@ p { color: #4a444e; }
 .brand { display: flex; align-items: center; gap: 0.65rem; }
 
 /* Logo en imagen (PNG transparente real) */
-.brand-logo { height: 46px; width: auto; display: block; }
+.brand-logo { height: 62px; width: auto; display: block; }
+.navbar.scrolled .brand-logo { height: 54px; } /* un poco menor cuando la barra se compacta */
 /* Sobre el hero (barra transparente): logo blanco. Al bajar (barra blanca): logo a color */
 .brand-logo-dark { display: none; }
 .navbar.scrolled .brand-logo-light { display: none; }
 .navbar.scrolled .brand-logo-dark { display: block; }
-.footer-logo { height: 56px; }
+.footer-logo { height: 72px; }
 .brand-flame {
   width: 34px; height: 40px;
   flex-shrink: 0;
