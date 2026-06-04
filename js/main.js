@@ -120,21 +120,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const livePlayer = document.getElementById("livePlayer");
   if (livePlayer) {
-    let embed = "";
+    // Construimos la URL del reproductor según la opción configurada
+    let embedSrc = "";
     if (LIVE_CONFIG.youtubeChannelId) {
-      embed = `<iframe src="https://www.youtube.com/embed/live_stream?channel=${LIVE_CONFIG.youtubeChannelId}" title="Transmisión en vivo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      embedSrc = `https://www.youtube.com/embed/live_stream?channel=${LIVE_CONFIG.youtubeChannelId}`;
     } else if (LIVE_CONFIG.youtubeVideoId) {
-      embed = `<iframe src="https://www.youtube.com/embed/${LIVE_CONFIG.youtubeVideoId}" title="Transmisión en vivo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      embedSrc = `https://www.youtube.com/embed/${LIVE_CONFIG.youtubeVideoId}`;
     } else if (LIVE_CONFIG.facebookVideoUrl) {
-      const src =
-        "https://www.facebook.com/plugins/video.php?href=" +
-        encodeURIComponent(LIVE_CONFIG.facebookVideoUrl) +
-        "&show_text=false";
-      embed = `<iframe src="${src}" title="Transmisión en vivo" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen scrolling="no"></iframe>`;
+      embedSrc =
+        "https://www.facebook.com/plugins/video.php?show_text=false&href=" +
+        encodeURIComponent(LIVE_CONFIG.facebookVideoUrl);
     }
 
-    if (embed) {
-      livePlayer.innerHTML = embed;
+    const buildIframe = (src) => {
+      const isFb = src.indexOf("facebook.com") !== -1;
+      const allow = isFb
+        ? "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        : "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+      const extra = isFb ? ' scrolling="no"' : "";
+      return `<iframe src="${src}" title="Transmisión en vivo" allow="${allow}" allowfullscreen${extra}></iframe>`;
+    };
+
+    if (embedSrc) {
+      // Portada (facade): se ve bonita aunque no haya transmisión activa.
+      // El reproductor se carga solo cuando la persona da clic en "play".
+      livePlayer.innerHTML =
+        '<button class="live-facade" type="button" aria-label="Reproducir transmisión en vivo">' +
+        '<span class="live-badge"><span class="live-dot"></span> En directo</span>' +
+        '<span class="live-play">▶</span>' +
+        '<span class="live-facade-title">Ver transmisión en vivo</span>' +
+        '<span class="live-facade-note">Toca para abrir el reproductor. Si estamos en vivo, el servicio empezará aquí mismo.</span>' +
+        "</button>";
+
+      livePlayer.querySelector(".live-facade").addEventListener("click", () => {
+        const sep = embedSrc.indexOf("?") !== -1 ? "&" : "?";
+        const isFb = embedSrc.indexOf("facebook.com") !== -1;
+        const playSrc = embedSrc + sep + (isFb ? "autoplay=true" : "autoplay=1");
+        livePlayer.innerHTML = buildIframe(playSrc);
+      });
     } else {
       livePlayer.innerHTML =
         '<div class="live-offline">' +
