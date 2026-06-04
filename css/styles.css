@@ -103,6 +103,14 @@ p { color: #4a444e; }
 
 /* ---------- Logo / Marca ---------- */
 .brand { display: flex; align-items: center; gap: 0.65rem; }
+
+/* Logo en imagen (PNG transparente real) */
+.brand-logo { height: 46px; width: auto; display: block; }
+/* Sobre el hero (barra transparente): logo blanco. Al bajar (barra blanca): logo a color */
+.brand-logo-dark { display: none; }
+.navbar.scrolled .brand-logo-light { display: none; }
+.navbar.scrolled .brand-logo-dark { display: block; }
+.footer-logo { height: 56px; }
 .brand-flame {
   width: 34px; height: 40px;
   flex-shrink: 0;
@@ -190,9 +198,9 @@ p { color: #4a444e; }
   object-fit: cover;
   object-position: center;
   z-index: 0;
-  /* Desenfoque suave: el video queda como fondo atmosférico y el título resalta */
-  filter: blur(5px) saturate(1.05) brightness(0.92);
-  transform: scale(1.08); /* evita que se vean los bordes del desenfoque */
+  /* Desenfoque fuerte: el video queda abstracto y el título resalta */
+  filter: blur(12px) saturate(1.08) brightness(0.88);
+  transform: scale(1.14); /* evita que se vean los bordes del desenfoque */
 }
 .hero-overlay {
   position: absolute;
