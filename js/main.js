@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // OPCIÓN 1 (la mejor para YouTube): ID del canal, empieza por "UC...".
     // Con esto el video EN VIVO aparece solo cuando estés transmitiendo.
     // Cómo obtenerlo: entra a tu canal en YouTube > "Compartir canal" > "Copiar ID del canal".
-    youtubeChannelId: "",
+    youtubeChannelId: "UCQ66SsvrinYowJMgebIEr2w",
 
     // OPCIÓN 2: ID de un video concreto de YouTube
     // (lo que va después de "watch?v=" en la URL del video).
