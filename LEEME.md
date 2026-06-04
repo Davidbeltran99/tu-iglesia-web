@@ -41,25 +41,52 @@ Todo se edita en **index.html** buscando el texto y reemplazándolo.
 7. **Mapa** → busca el `<iframe>` del mapa y cambia `Villavicencio,Meta,Colombia`
    por la dirección exacta de la iglesia.
 
+### Transmisión en vivo
+
+En `js/main.js` está `LIVE_CONFIG`. Rellena **una** de las opciones:
+- `youtubeChannelId` → el ID de tu canal (empieza por `UC...`). Es la mejor opción:
+  el video EN VIVO aparece solo cuando transmites. Lo sacas en YouTube →
+  "Compartir canal" → "Copiar ID del canal".
+- `youtubeVideoId` → el ID de un video puntual (lo que va después de `watch?v=`).
+- `facebookVideoUrl` → la URL de la transmisión de Facebook (copiada del navegador).
+
 ### Cambiar colores
 
-En `css/styles.css`, arriba del todo, está la sección `:root` con los colores.
-- `--indigo-...` → el azul/morado principal.
-- `--gold` → el dorado de los acentos.
+En `css/styles.css`, arriba del todo, está la sección `:root` con los colores de
+la llama:
+- `--flame-1` … `--flame-4` → amarillo → naranja → rojo → magenta.
+- `--accent` → el tono de los antetítulos.
+- `--dark` / `--dark-2` → los fondos oscuros (hero, en vivo, footer).
 
 ## 🖼️ Agregar fotos
 
-Crea una carpeta `img/` y guarda ahí las fotos. Luego me avisas y reemplazo el
-fondo del hero (degradado) por una foto real de la iglesia, y agrego una galería.
+Guarda las fotos en la carpeta `img/`. Luego me avisas y reemplazo el fondo del
+hero (degradado) por una foto real de la iglesia, y agrego una galería.
 
-## 🌐 Cómo publicarla en internet (gratis)
+## 🌐 Publicar en internet
 
-Cualquiera de estas opciones sirve y son gratuitas:
+### Opción rápida (sin servidor)
+- **Netlify**: https://app.netlify.com/drop y arrastra la carpeta. Link en segundos.
 
-- **Netlify** (la más fácil): entra a https://app.netlify.com/drop y arrastra la
-  carpeta completa. En segundos te da un link público.
-- **Vercel**: https://vercel.com → "Add New Project".
-- **GitHub Pages**: si la subes a un repositorio de GitHub.
+### Railway (con el servidor incluido) — recomendado
+El proyecto ya trae todo lo necesario (`server.js`, `package.json`):
+
+1. Sube el código a **GitHub** (ver abajo).
+2. Entra a https://railway.app → **New Project** → **Deploy from GitHub repo**.
+3. Elige este repositorio. Railway detecta Node, instala y ejecuta `npm start`.
+4. En **Settings → Networking → Generate Domain** obtienes tu link público.
+
+> Railway asigna el puerto por la variable `PORT`; el `server.js` ya la usa.
+
+### Subir a GitHub (con GitHub CLI)
+Ya está instalado `gh`. En tu terminal (PowerShell), dentro de esta carpeta:
+
+```powershell
+gh auth login        # GitHub.com → HTTPS → Login with a web browser
+gh repo create tu-iglesia-web --public --source=. --remote=origin --push
+```
+
+Eso crea el repo y sube todo. Para cambios futuros: `git add -A && git commit -m "cambios" && git push`.
 
 Cuando quieras un dominio propio (ej. `tuiglesia.com`), me dices y te guío.
 
