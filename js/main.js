@@ -168,7 +168,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* --- Peticiones de oración -> WhatsApp del pastor --- */
+  /* --- Peticiones de oración -> correo + WhatsApp --- */
+  // El correo se envía con FormSubmit (https://formsubmit.co), sin servidor propio.
+  // Requiere confirmar el correo UNA sola vez (FormSubmit envía un email de activación).
+  const PRAYER_EMAIL = "tuiglesia.villavicencio@gmail.com";
+
   const prayerForm = document.getElementById("prayerForm");
   const prayerNote = document.getElementById("prayerNote");
 
@@ -183,15 +187,29 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      // 1) Enviar la petición al CORREO (en segundo plano)
+      fetch("https://formsubmit.co/ajax/" + PRAYER_EMAIL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: "🙏 Nueva petición de oración — Tú Iglesia",
+          _template: "table",
+          _captcha: "false",
+          Nombre: nombre,
+          Petición: mensaje,
+        }),
+      }).catch(() => {});
+
+      // 2) Abrir WhatsApp (se hace de inmediato para no perder el gesto del usuario)
       const texto =
         `🙏 *Petición de oración*%0A%0A` +
         `*De:* ${encodeURIComponent(nombre)}%0A` +
         `*Petición:* ${encodeURIComponent(mensaje)}`;
-
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${texto}`, "_blank");
 
       if (prayerNote)
-        prayerNote.textContent = "Gracias por confiar en nosotros. Estaremos orando por ti. 🙏";
+        prayerNote.textContent =
+          "Gracias por confiar en nosotros. Recibimos tu petición y estaremos orando por ti. 🙏";
       prayerForm.reset();
     });
   }
