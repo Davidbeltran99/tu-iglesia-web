@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tú Iglesia — Lugar de Adoración</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='f' x1='0' y1='1' x2='0' y2='0'><stop offset='0' stop-color='%23FBB040'/><stop offset='0.5' stop-color='%23F26F21'/><stop offset='1' stop-color='%23D0155F'/></linearGradient></defs><path d='M32 4 C38 16 48 22 48 36 C48 48 41 56 32 56 C23 56 16 48 16 36 C16 28 22 24 25 16 C27 21 30 23 34 24 C35 17 34 10 32 4 Z' fill='url(%23f)'/></svg>" />
+  <meta name="description" content="Tú Iglesia, Lugar de Adoración en Villavicencio. Te invitamos a vivir una experiencia con Dios. Conoce nuestros horarios de cultos, ministerios y eventos." />
+
+  <!-- Open Graph (para que se vea bien al compartir en WhatsApp/Facebook) -->
+  <meta property="og:title" content="Tú Iglesia — Lugar de Adoración" />
+  <meta property="og:description" content="Un lugar para adorar a Dios y encontrar vida." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Fredoka:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand">
+        <svg class="brand-flame" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="flameNav" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#FBB040" />
+              <stop offset="0.5" stop-color="#F26F21" />
+              <stop offset="1" stop-color="#D0155F" />
+            </linearGradient>
+          </defs>
+          <path d="M32 4 C38 16 48 22 48 36 C48 48 41 56 32 56 C23 56 16 48 16 36 C16 28 22 24 25 16 C27 21 30 23 34 24 C35 17 34 10 32 4 Z" fill="url(#flameNav)" />
+          <path d="M33 28 C37 35 42 38 42 45 C42 51 38 54 32 54 C27 54 23 51 23 46 C23 41 27 39 29 33 C30 36 32 37 33 37 Z" fill="#FFD15A" opacity="0.85" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">TÚ <strong>IGLESIA</strong></span>
+          <span class="brand-tag">Lugar de Adoración</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#ministerios">Ministerios</a>
+        <a href="#peticiones">Peticiones</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#envivo" class="nav-live"><span class="live-dot"></span>En vivo</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content reveal">
+      <p class="hero-eyebrow">Lugar de Adoración</p>
+      <h1 class="hero-title">Bienvenido a<br /><span>Tú Iglesia</span></h1>
+      <p class="hero-subtitle">
+        Creemos que Dios tiene un propósito para tu vida. Aquí tienes un lugar
+        para adorar, crecer y encontrar una fe que transforma.
+      </p>
+      <div class="hero-actions">
+        <a href="#horarios" class="btn btn-primary">Ver horarios de culto</a>
+        <a href="#nosotros" class="btn btn-ghost">Conócenos &rsaquo;</a>
+      </div>
+    </div>
+    <a href="#nosotros" class="hero-scroll" aria-label="Bajar">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ NOSOTROS ============ -->
+  <section class="section" id="nosotros">
+    <div class="container grid-2">
+      <div class="reveal">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2 class="section-title">Más que una iglesia,<br />una familia</h2>
+        <p class="lead">
+          Somos una comunidad cristiana que ama a Dios y ama a las personas.
+          Nuestro deseo es que cada persona que llega encuentre un lugar para
+          crecer, sanar y descubrir el propósito para el que fue creada.
+        </p>
+        <p>
+          No importa de dónde vienes ni cómo llegas: aquí hay un lugar para ti.
+          Te invitamos a ser parte de lo que Dios está haciendo en medio de nosotros.
+        </p>
+        <a href="#contacto" class="btn btn-primary" style="margin-top: 1.5rem;">Quiero visitarlos</a>
+      </div>
+
+      <div class="values reveal">
+        <div class="value-card">
+          <div class="value-icon">✝</div>
+          <h3>Nuestra fe</h3>
+          <p>Creemos en Jesús como el centro de todo y en una vida guiada por su Palabra.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">❤</div>
+          <h3>Nuestra misión</h3>
+          <p>Llevar esperanza a Villavicencio y formar discípulos que transformen su entorno.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Nuestra comunidad</h3>
+          <p>Grupos pequeños y familias que caminan juntas en cada etapa de la vida.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h3>Nuestro propósito</h3>
+          <p>Que cada persona crezca espiritualmente y encuentre su lugar para servir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRANSMISIÓN EN VIVO ============ -->
+  <section class="section section-dark" id="envivo">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow-light"><span class="live-dot"></span> En directo</p>
+        <h2 class="section-title light">Transmisión en vivo</h2>
+        <p class="lead center light">Conéctate a nuestros servicios desde donde estés. Cuando estemos en vivo, el video aparece aquí.</p>
+      </div>
+
+      <div class="live-wrap reveal">
+        <div class="live-frame" id="livePlayer">
+          <!-- El reproductor (YouTube/Facebook) se inserta por JavaScript.
+               Configúralo en js/main.js -> LIVE_CONFIG -->
+        </div>
+        <div class="live-cta">
+          <a class="btn btn-primary" href="https://www.youtube.com/@tuiglesia-LDA" target="_blank" rel="noopener">▶ Ver en YouTube</a>
+          <a class="btn btn-light" href="https://www.facebook.com/profile.php?id=61579805030083" target="_blank" rel="noopener">Ver en Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HORARIOS ============ -->
+  <section class="section section-alt" id="horarios">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Te esperamos</p>
+        <h2 class="section-title">Horarios de nuestros cultos</h2>
+        <p class="lead center">Reúnete con nosotros para adorar, aprender y compartir.</p>
+      </div>
+
+      <div class="schedule reveal">
+        <div class="schedule-card highlight">
+          <span class="schedule-day">Domingo</span>
+          <span class="schedule-time">9:00 – 11:00 AM</span>
+          <p class="schedule-desc">Culto principal de adoración y predicación.</p>
+        </div>
+        <div class="schedule-card">
+          <span class="schedule-day">Miércoles</span>
+          <span class="schedule-time">7:00 – 9:00 PM</span>
+          <p class="schedule-desc">Estudio de la Palabra y oración.</p>
+        </div>
+        <div class="schedule-card">
+          <span class="schedule-day">Sábado</span>
+          <span class="schedule-time">10:00 AM – 12:00 M</span>
+          <p class="schedule-desc">Ayuno y oración.</p>
+        </div>
+        <div class="schedule-card highlight">
+          <span class="schedule-day">Sábado</span>
+          <span class="schedule-time">4:00 – 6:30 PM</span>
+          <p class="schedule-desc">Culto de jóvenes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MINISTERIOS ============ -->
+  <section class="section" id="ministerios">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Sirve y crece</p>
+        <h2 class="section-title">Nuestros ministerios</h2>
+        <p class="lead center">Hay un lugar para cada persona en la familia de la fe.</p>
+      </div>
+
+      <div class="ministries reveal">
+        <article class="ministry-card">
+          <div class="ministry-emoji">🧒</div>
+          <h3>Niños</h3>
+          <p>Enseñamos a los más pequeños el amor de Dios de forma divertida y segura.</p>
+        </article>
+        <article class="ministry-card">
+          <div class="ministry-emoji">🔥</div>
+          <h3>Jóvenes</h3>
+          <p>Una generación apasionada por Dios, con encuentros llenos de vida.</p>
+        </article>
+        <article class="ministry-card">
+          <div class="ministry-emoji">💍</div>
+          <h3>Matrimonios</h3>
+          <p>Fortalecemos familias con principios bíblicos y acompañamiento.</p>
+        </article>
+        <article class="ministry-card">
+          <div class="ministry-emoji">🎵</div>
+          <h3>Alabanza</h3>
+          <p>Adoramos a Dios con música y un corazón rendido a Él.</p>
+        </article>
+        <article class="ministry-card">
+          <div class="ministry-emoji">🏠</div>
+          <h3>Grupos pequeños</h3>
+          <p>Comunidades en casas donde crecemos y nos cuidamos unos a otros.</p>
+        </article>
+        <article class="ministry-card">
+          <div class="ministry-emoji">🙌</div>
+          <h3>Servicio social</h3>
+          <p>Llevamos amor práctico a quienes más lo necesitan en la ciudad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVENTOS ============ -->
+  <section class="section section-alt" id="eventos">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Agenda</p>
+        <h2 class="section-title">Próximos eventos</h2>
+        <p class="lead center">No te pierdas lo que viene en la vida de la iglesia.</p>
+      </div>
+
+      <div class="events reveal">
+        <article class="event-card">
+          <div class="event-date"><span class="day">15</span><span class="month">JUN</span></div>
+          <div class="event-body">
+            <h3>Encuentro de jóvenes</h3>
+            <p>Una noche especial de adoración, palabra y comunión. 7:00 PM.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date"><span class="day">22</span><span class="month">JUN</span></div>
+          <div class="event-body">
+            <h3>Almuerzo familiar</h3>
+            <p>Compartimos juntos como familia después del culto. 1:00 PM.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date"><span class="day">06</span><span class="month">JUL</span></div>
+          <div class="event-body">
+            <h3>Bautizos</h3>
+            <p>Celebramos a quienes dan el paso de fe. Inscríbete con nosotros.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PETICIONES DE ORACIÓN ============ -->
+  <section class="prayer" id="peticiones">
+    <div class="container prayer-inner reveal">
+      <div class="prayer-text">
+        <p class="eyebrow eyebrow-light">Estamos contigo</p>
+        <h2 class="prayer-title">¿Cómo podemos orar por ti?</h2>
+        <p class="prayer-lead">
+          No estás solo. Cuéntanos tu petición y nuestro equipo de oración
+          intercederá por ti esta semana. Lo que escribas queda entre tú,
+          nosotros y Dios. 🙏
+        </p>
+      </div>
+
+      <form class="prayer-form" id="prayerForm">
+        <div class="field">
+          <label for="pNombre">Tu nombre <span class="opt">(opcional)</span></label>
+          <input type="text" id="pNombre" name="pNombre" placeholder="¿Cómo te llamas?" />
+        </div>
+        <div class="field">
+          <label for="pMensaje">Tu petición de oración</label>
+          <textarea id="pMensaje" name="pMensaje" rows="4" placeholder="Escribe aquí por qué quieres que oremos…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-light btn-block">Enviar mi petición 🙏</button>
+        <p class="form-note prayer-note" id="prayerNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CITA / VERSÍCULO ============ -->
+  <section class="verse">
+    <div class="container reveal">
+      <blockquote>
+        “Porque yo sé los planes que tengo para vosotros, planes de bienestar
+        y no de calamidad, para daros un futuro y una esperanza.”
+      </blockquote>
+      <cite>— Jeremías 29:11</cite>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section" id="contacto">
+    <div class="container grid-2">
+      <div class="reveal">
+        <p class="eyebrow">Visítanos</p>
+        <h2 class="section-title">Nos encantaría conocerte</h2>
+        <p class="lead">Escríbenos o ven a visitarnos. ¡Te recibiremos con los brazos abiertos!</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-ico">📍</span>
+            <div><strong>Dirección</strong><br />Cra. 1 #15b-61, Alamedas del Bosque, Villavicencio</div>
+          </li>
+          <li>
+            <span class="contact-ico">📱</span>
+            <div><strong>WhatsApp · Pastor Jaime Cardozo</strong><br /><a href="https://wa.me/573132607084" target="_blank" rel="noopener">+57 313 260 7084</a></div>
+          </li>
+          <li>
+            <span class="contact-ico">✉️</span>
+            <div><strong>Correo</strong><br /><a href="mailto:tuiglesia.villavicencio@gmail.com">tuiglesia.villavicencio@gmail.com</a></div>
+          </li>
+        </ul>
+
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=61579805030083" target="_blank" rel="noopener" aria-label="Facebook" class="social">f</a>
+          <a href="https://www.instagram.com/tuiglesialda" target="_blank" rel="noopener" aria-label="Instagram" class="social">ig</a>
+          <a href="https://www.youtube.com/@tuiglesia-LDA" target="_blank" rel="noopener" aria-label="YouTube" class="social">yt</a>
+          <a href="https://wa.me/573132607084" target="_blank" rel="noopener" aria-label="WhatsApp" class="social wa">wa</a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form class="contact-form" id="contactForm">
+          <h3>Envíanos un mensaje</h3>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="field">
+            <label for="email">Correo o WhatsApp</label>
+            <input type="text" id="email" name="email" placeholder="¿Cómo te contactamos?" required />
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar por WhatsApp</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="container map-wrap reveal">
+      <iframe
+        title="Ubicación de la iglesia"
+        src="https://www.google.com/maps?q=Carrera%201%20%2315b-61,%20Alamedas%20del%20Bosque,%20Villavicencio,%20Meta&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand footer-brand">
+        <svg class="brand-flame" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="flameFoot" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#FBB040" />
+              <stop offset="0.5" stop-color="#F26F21" />
+              <stop offset="1" stop-color="#D0155F" />
+            </linearGradient>
+          </defs>
+          <path d="M32 4 C38 16 48 22 48 36 C48 48 41 56 32 56 C23 56 16 48 16 36 C16 28 22 24 25 16 C27 21 30 23 34 24 C35 17 34 10 32 4 Z" fill="url(#flameFoot)" />
+          <path d="M33 28 C37 35 42 38 42 45 C42 51 38 54 32 54 C27 54 23 51 23 46 C23 41 27 39 29 33 C30 36 32 37 33 37 Z" fill="#FFD15A" opacity="0.85" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">TÚ <strong>IGLESIA</strong></span>
+          <span class="brand-tag">Lugar de Adoración</span>
+        </span>
+      </div>
+      <nav class="footer-links">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#envivo">En vivo</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#ministerios">Ministerios</a>
+        <a href="#peticiones">Peticiones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer-copy">© <span id="year"></span> Tú Iglesia · Villavicencio, Colombia. Hecho con fe.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/573132607084" class="wa-float" aria-label="Escríbenos por WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.26l-.999 3.648 3.973-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

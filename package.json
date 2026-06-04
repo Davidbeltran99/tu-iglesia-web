@@ -1,0 +1,12 @@
+{
+  "name": "tu-iglesia-web",
+  "version": "1.0.0",
+  "description": "Sitio web de Tú Iglesia — Lugar de Adoración (Villavicencio)",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
