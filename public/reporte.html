@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reporte de personas — Tú Iglesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+  <div class="report" id="report">
+    <div class="report-head">
+      <div>
+        <h1>Personas registradas</h1>
+        <p class="mini" id="reportMeta">Cargando…</p>
+      </div>
+      <div class="no-print" style="display:flex;gap:.6rem">
+        <a class="btn btn-ghost" href="/portal.html">&lsaquo; Volver</a>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ Imprimir / PDF</button>
+      </div>
+    </div>
+    <div id="reportBody"><div class="empty">Cargando…</div></div>
+  </div>
+
+  <script>
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c]));
+
+    async function load() {
+      const me = await fetch("/api/auth/me", { credentials: "same-origin" }).then((r) => r.json()).catch(() => ({}));
+      if (!me.ok) { window.location.href = "/login.html"; return; }
+      if (me.user.role !== "admin") { window.location.href = "/portal.html"; return; }
+
+      const data = await fetch("/api/members", { credentials: "same-origin" }).then((r) => r.json());
+      const members = data.members || [];
+
+      const grupos = {};
+      members.forEach((m) => {
+        const key = m.ministerio_nombre || "Sin ministerio";
+        (grupos[key] = grupos[key] || []).push(m);
+      });
+
+      const fecha = new Date().toLocaleDateString("es-CO", { year: "numeric", month: "long", day: "numeric" });
+      document.getElementById("reportMeta").textContent = `Tú Iglesia · Total: ${members.length} personas · Generado el ${fecha}`;
+
+      const nombres = Object.keys(grupos).sort();
+      const body = document.getElementById("reportBody");
+      if (!members.length) { body.innerHTML = `<div class="empty">No hay personas registradas todavía.</div>`; return; }
+
+      body.innerHTML = nombres.map((nombre) => {
+        const filas = grupos[nombre].map((m, i) => `<tr>
+            <td>${i + 1}</td>
+            <td><strong>${esc(m.nombre)}</strong></td>
+            <td>${esc(m.telefono || "—")}</td>
+            <td>${esc(m.email || "—")}</td>
+            <td>${esc(m.direccion || "—")}</td>
+          </tr>`).join("");
+        return `<div class="report-group">
+          <h2>${esc(nombre)} <span class="mini">(${grupos[nombre].length})</span></h2>
+          <table class="table"><thead><tr><th>#</th><th>Nombre</th><th>Teléfono</th><th>Correo</th><th>Dirección</th></tr></thead>
+          <tbody>${filas}</tbody></table>
+        </div>`;
+      }).join("");
+    }
+    load();
+  </script>
+</body>
+</html>

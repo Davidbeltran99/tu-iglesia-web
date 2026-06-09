@@ -4,6 +4,12 @@ node_modules/
 *.log
 npm-debug.log*
 
+# Base de datos local (SQLite)
+data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
 # Sistema operativo
 .DS_Store
 Thumbs.db

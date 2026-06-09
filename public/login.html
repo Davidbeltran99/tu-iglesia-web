@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso líderes — Tú Iglesia</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='f' x1='0' y1='1' x2='0' y2='0'><stop offset='0' stop-color='%23FBB040'/><stop offset='0.5' stop-color='%23F26F21'/><stop offset='1' stop-color='%23D0155F'/></linearGradient></defs><path d='M32 4 C38 16 48 22 48 36 C48 48 41 56 32 56 C23 56 16 48 16 36 C16 28 22 24 25 16 C27 21 30 23 34 24 C35 17 34 10 32 4 Z' fill='url(%23f)'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <img src="img/logo-mark.png" alt="Tú Iglesia" class="auth-logo" />
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login" type="button">Iniciar sesión</button>
+        <button class="auth-tab" data-tab="register" type="button">Registrarme</button>
+      </div>
+
+      <!-- LOGIN -->
+      <form class="auth-form active" id="loginForm">
+        <div class="field">
+          <label for="loginEmail">Correo</label>
+          <input type="email" id="loginEmail" autocomplete="email" required placeholder="tucorreo@ejemplo.com" />
+        </div>
+        <div class="field">
+          <label for="loginPassword">Contraseña</label>
+          <input type="password" id="loginPassword" autocomplete="current-password" required placeholder="••••••••" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+        <p class="note" id="loginNote"></p>
+      </form>
+
+      <!-- REGISTRO -->
+      <form class="auth-form" id="registerForm">
+        <div class="field">
+          <label for="regNombre">Nombre completo</label>
+          <input type="text" id="regNombre" required placeholder="Tu nombre" />
+        </div>
+        <div class="field">
+          <label for="regEmail">Correo</label>
+          <input type="email" id="regEmail" autocomplete="email" required placeholder="tucorreo@ejemplo.com" />
+        </div>
+        <div class="field">
+          <label for="regMinisterio">Ministerio</label>
+          <select id="regMinisterio" required>
+            <option value="">Selecciona tu ministerio…</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="regPassword">Contraseña</label>
+          <input type="password" id="regPassword" autocomplete="new-password" required placeholder="Mínimo 6 caracteres" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Crear mi cuenta</button>
+        <p class="note" id="registerNote"></p>
+      </form>
+
+      <a class="auth-back" href="/">&lsaquo; Volver al sitio</a>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    // Pestañas
+    document.querySelectorAll(".auth-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".auth-tab").forEach((t) => t.classList.remove("active"));
+        document.querySelectorAll(".auth-form").forEach((f) => f.classList.remove("active"));
+        tab.classList.add("active");
+        $(tab.dataset.tab === "login" ? "loginForm" : "registerForm").classList.add("active");
+      });
+    });
+
+    // Cargar ministerios en el registro
+    fetch("/api/ministerios")
+      .then((r) => r.json())
+      .then((data) => {
+        if (!data.ok) return;
+        const sel = $("regMinisterio");
+        data.ministerios
+          .filter((m) => m.slug !== "pastoral") // el rol admin lo asigna el pastor
+          .forEach((m) => {
+            const opt = document.createElement("option");
+            opt.value = m.id;
+            opt.textContent = m.nombre;
+            sel.appendChild(opt);
+          });
+      })
+      .catch(() => {});
+
+    // Login
+    $("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const note = $("loginNote");
+      note.textContent = "Entrando…";
+      note.className = "note";
+      try {
+        const res = await fetch("/api/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: $("loginEmail").value, password: $("loginPassword").value }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          note.textContent = data.error || "No se pudo iniciar sesión";
+          note.className = "note error";
+          return;
+        }
+        window.location.href = "/portal.html";
+      } catch {
+        note.textContent = "Error de conexión. Intenta de nuevo.";
+        note.className = "note error";
+      }
+    });
+
+    // Registro
+    $("registerForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const note = $("registerNote");
+      note.textContent = "Enviando…";
+      note.className = "note";
+      try {
+        const res = await fetch("/api/auth/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            nombre: $("regNombre").value,
+            email: $("regEmail").value,
+            password: $("regPassword").value,
+            ministerio_id: $("regMinisterio").value || null,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          note.textContent = data.error || "No se pudo registrar";
+          note.className = "note error";
+          return;
+        }
+        note.textContent = data.message || "Solicitud enviada. Espera la aprobación del pastor.";
+        note.className = "note success";
+        $("registerForm").reset();
+      } catch {
+        note.textContent = "Error de conexión. Intenta de nuevo.";
+        note.className = "note error";
+      }
+    });
+  </script>
+</body>
+</html>

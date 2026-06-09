@@ -1,19 +1,28 @@
-# Tú Iglesia — Página web
+# Tú Iglesia — Página web + Portal de líderes
 
-Página web estática (HTML + CSS + JavaScript). No necesita servidor ni base de datos:
-solo abrir el archivo en el navegador.
+Sitio web de la iglesia (landing pública) **más** un portal privado con login,
+roles por ministerio, calendario/eventos, base de datos de personas y reportes.
+Corre con Node + Express (servidor `server.js`) y guarda los datos en un archivo
+JSON (`data/iglesia.json`).
 
 ## 📂 Estructura
 
 ```
 PAGINA DE LA IGLESIA/
-├── index.html        ← La página principal (todo el contenido)
-├── css/
-│   └── styles.css    ← Los estilos y colores
-├── js/
-│   └── main.js       ← El menú, animaciones y el formulario
-├── img/
-│   └── logo-tuiglesia.jpg  ← Tu logo original (de respaldo)
+├── server.js         ← Servidor Express (landing + API del portal)
+├── db.js             ← Almacén de datos (JSON: ministerios, usuarios, eventos, personas)
+├── auth.js           ← Login (contraseñas + JWT en cookie)
+├── package.json      ← Dependencias
+├── data/             ← Base de datos JSON (NO se sube a GitHub)
+├── public/           ← Todo lo que ve el navegador
+│   ├── index.html    ← Landing pública
+│   ├── login.html    ← Acceso de líderes (entrar / registrarse)
+│   ├── portal.html   ← Panel privado (eventos, personas, aprobaciones…)
+│   ├── reporte.html  ← Reporte imprimible de personas por ministerio
+│   ├── portal.js / portal.css
+│   ├── css/ js/ video/
+│   └── img/
+│       └── logo-tuiglesia.jpg  ← Tu logo original (de respaldo)
 └── LEEME.md          ← Este archivo
 ```
 
@@ -65,10 +74,10 @@ hero (degradado) por una foto real de la iglesia, y agrego una galería.
 
 ## 🌐 Publicar en internet
 
-### Opción rápida (sin servidor)
-- **Netlify**: https://app.netlify.com/drop y arrastra la carpeta. Link en segundos.
+> Ahora el sitio **necesita Node** (por el portal de líderes), así que Netlify "drag & drop"
+> ya no aplica. Se publica en **Railway** (donde ya está) o cualquier hosting Node.
 
-### Railway (con el servidor incluido) — recomendado
+### Railway — recomendado
 El proyecto ya trae todo lo necesario (`server.js`, `package.json`):
 
 1. Sube el código a **GitHub** (ver abajo).
@@ -87,6 +96,46 @@ gh repo create tu-iglesia-web --public --source=. --remote=origin --push
 ```
 
 Eso crea el repo y sube todo. Para cambios futuros: `git add -A && git commit -m "cambios" && git push`.
+
+---
+
+## 🔐 Portal de líderes (login, roles, eventos, personas, reportes)
+
+Área privada en **/login.html** (enlace "Acceso líderes" en el footer).
+
+### Cómo funciona
+- **El pastor** es el administrador. Su cuenta se crea sola al arrancar el servidor
+  usando las variables `ADMIN_EMAIL` / `ADMIN_PASSWORD`.
+- **Los líderes se registran solos** eligiendo su ministerio y quedan *pendientes*.
+- El pastor entra al portal → **Aprobaciones** → aprueba la cuenta (y confirma
+  ministerio/rol). Recién ahí el líder puede ingresar.
+- Cada líder ve y registra **solo las personas de su ministerio**; el pastor ve y
+  administra **todas** y puede **imprimir el reporte** por ministerio (botón Reportes → Imprimir/PDF).
+- El pastor publica **eventos** (normales y especiales) y todos los líderes los ven.
+
+### Variables de entorno (configúralas en Railway → Variables)
+
+| Variable | Para qué | Ejemplo |
+|---|---|---|
+| `JWT_SECRET` | Firma las sesiones (pon algo largo y secreto) | `una-frase-larga-y-secreta-123` |
+| `ADMIN_EMAIL` | Correo del pastor (admin) | `pastor@tuiglesia.com.co` |
+| `ADMIN_PASSWORD` | Contraseña inicial del pastor | `(elige una segura)` |
+| `ADMIN_NOMBRE` | Nombre que se muestra | `Pastor Jaime Cardozo` |
+| `DB_PATH` | Dónde se guarda la base | `/app/data/iglesia.json` |
+
+### ⚠️ Volumen persistente (MUY importante)
+En Railway hay que añadir un **Volume** montado en **`/app/data`**. Si no, la base de
+datos (líderes, eventos, personas) **se borra en cada despliegue**.
+
+Railway → tu servicio → pestaña **Volumes** → **+ New Volume** → Mount path: `/app/data`.
+
+### Probar en local
+```bash
+npm install
+# PowerShell:
+$env:JWT_SECRET="dev"; $env:ADMIN_EMAIL="pastor@tuiglesia.com.co"; $env:ADMIN_PASSWORD="Pastor123"; $env:ADMIN_NOMBRE="Pastor Jaime"; node server.js
+```
+Luego abre http://localhost:3000/login.html
 
 Cuando quieras un dominio propio (ej. `tuiglesia.com`), me dices y te guío.
 

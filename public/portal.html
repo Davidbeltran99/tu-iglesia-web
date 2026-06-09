@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal de líderes — Tú Iglesia</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='f' x1='0' y1='1' x2='0' y2='0'><stop offset='0' stop-color='%23FBB040'/><stop offset='0.5' stop-color='%23F26F21'/><stop offset='1' stop-color='%23D0155F'/></linearGradient></defs><path d='M32 4 C38 16 48 22 48 36 C48 48 41 56 32 56 C23 56 16 48 16 36 C16 28 22 24 25 16 C27 21 30 23 34 24 C35 17 34 10 32 4 Z' fill='url(%23f)'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/portal.html"><img src="img/logo-mark-white.png" alt="Tú Iglesia" /></a>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <div class="who"><strong id="whoName">—</strong><span id="whoRole"></span></div>
+      <button class="btn btn-ghost btn-sm" id="logoutBtn" style="color:#fff;border-color:rgba(255,255,255,.3)">Salir</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar" id="sidebar">
+      <button data-section="eventos" class="active"><span class="ico">📅</span> Eventos</button>
+      <button data-section="personas"><span class="ico">👥</span> Personas</button>
+      <button data-section="aprobaciones" data-admin><span class="ico">✅</span> Aprobaciones</button>
+      <button data-section="ministerios" data-admin><span class="ico">⛪</span> Ministerios</button>
+      <button id="reporteBtn" data-admin><span class="ico">🖨️</span> Reportes</button>
+    </nav>
+
+    <main class="content">
+      <!-- EVENTOS -->
+      <section class="section active" id="sec-eventos">
+        <div class="section-head">
+          <div>
+            <h2>Calendario y eventos</h2>
+            <p class="sub">Horarios del año, eventos y fechas especiales.</p>
+          </div>
+          <button class="btn btn-primary" id="addEventBtn" data-admin>+ Nuevo evento</button>
+        </div>
+        <div id="eventsList"></div>
+      </section>
+
+      <!-- PERSONAS -->
+      <section class="section" id="sec-personas">
+        <div class="section-head">
+          <div>
+            <h2>Personas</h2>
+            <p class="sub" id="personasSub">Base de datos de la iglesia.</p>
+          </div>
+          <div style="display:flex; gap:.6rem; align-items:center; flex-wrap:wrap;">
+            <select id="filterMinisterio" class="btn-ghost" data-admin style="padding:.6rem .9rem;border-radius:12px;border:1.5px solid var(--line);"></select>
+            <button class="btn btn-primary" id="addMemberBtn">+ Registrar persona</button>
+          </div>
+        </div>
+        <div id="membersWrap"></div>
+      </section>
+
+      <!-- APROBACIONES (admin) -->
+      <section class="section" id="sec-aprobaciones">
+        <div class="section-head">
+          <div>
+            <h2>Aprobaciones y líderes</h2>
+            <p class="sub">Aprueba solicitudes y administra a los líderes.</p>
+          </div>
+        </div>
+        <div id="usersWrap"></div>
+      </section>
+
+      <!-- MINISTERIOS (admin) -->
+      <section class="section" id="sec-ministerios">
+        <div class="section-head">
+          <div>
+            <h2>Ministerios</h2>
+            <p class="sub">Crea o desactiva ministerios.</p>
+          </div>
+          <button class="btn btn-primary" id="addMinisterioBtn">+ Nuevo ministerio</button>
+        </div>
+        <div id="ministeriosWrap"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal genérico -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <h3 id="modalTitle">Título</h3>
+      <div id="modalBody"></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="modalCancel" type="button">Cancelar</button>
+        <button class="btn btn-primary" id="modalSave" type="button">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="portal.js"></script>
+</body>
+</html>
