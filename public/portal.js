@@ -164,26 +164,92 @@ async function removeMinisterio(id) {
   await loadMinisterios(); renderMinisterios(); toast("Eliminado", "success");
 }
 
-/* ---------- Eventos ---------- */
+/* ---------- Eventos (calendario) ---------- */
+let ALL_EVENTS = [];
+let SELECTED_MONTH = null;
+const MESES_LARGO = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const DIAS = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+
+// "Hoy" según la hora de Bogotá (America/Bogota), independiente del dispositivo
+function bogotaToday() {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Bogota", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+}
+function addDaysStr(ymd, days) {
+  const [y, m, d] = ymd.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d + days, 12)).toISOString().slice(0, 10);
+}
+function weekdayName(ymd) {
+  const [y, m, d] = ymd.split("-").map(Number);
+  return DIAS[new Date(Date.UTC(y, m - 1, d, 12)).getUTCDay()];
+}
+function whenLabel(ymd, today) {
+  if (ymd === today) return "Hoy";
+  if (ymd === addDaysStr(today, 1)) return "Mañana";
+  const [, m, d] = ymd.split("-").map(Number);
+  return `${weekdayName(ymd)}|${d} ${MESES_LARGO[m - 1]}`;
+}
+
 async function loadEvents() {
   const { data } = await api("GET", "/api/events");
+  ALL_EVENTS = data.events || [];
+  const today = bogotaToday();
+  renderProximas(today);
+  renderMesTabs(today);
+  const curMonth = today.slice(0, 7);
+  SELECTED_MONTH = ALL_EVENTS.some((e) => e.fecha.slice(0, 7) === curMonth)
+    ? curMonth
+    : (ALL_EVENTS[0] ? ALL_EVENTS[0].fecha.slice(0, 7) : curMonth);
+  renderMonth(SELECTED_MONTH, today);
+}
+
+function renderProximas(today) {
+  const box = $("proximasList");
+  const prox = ALL_EVENTS.filter((e) => e.fecha >= today).slice(0, 12);
+  if (!prox.length) { box.innerHTML = `<div class="empty">No hay actividades próximas.</div>`; return; }
+  box.innerHTML = prox.map((ev) => {
+    const wl = whenLabel(ev.fecha, today).split("|");
+    const when = wl.length > 1 ? `${wl[0]}<small>${wl[1]}</small>` : wl[0];
+    return `<div class="prox-item ${ev.fecha === today ? "hoy" : ""}">
+      <div class="prox-when">${when}</div>
+      <div class="prox-body"><span class="t">${escapeHtml(ev.titulo)}</span>
+        ${ev.tipo === "especial" ? '<span class="badge especial" style="margin-left:.4rem">Especial</span>' : ""}</div>
+      ${ev.hora ? `<div class="prox-hora">🕒 ${escapeHtml(ev.hora)}</div>` : ""}
+    </div>`;
+  }).join("");
+}
+
+function renderMesTabs(today) {
+  const tabs = $("mesTabs");
+  const meses = [...new Set(ALL_EVENTS.map((e) => e.fecha.slice(0, 7)))].sort();
+  tabs.innerHTML = meses.map((ym) => {
+    const nombre = MESES_LARGO[Number(ym.slice(5, 7)) - 1];
+    return `<button class="mes-tab" data-month="${ym}">${nombre[0].toUpperCase() + nombre.slice(1)}</button>`;
+  }).join("");
+  tabs.querySelectorAll(".mes-tab").forEach((b) => {
+    b.addEventListener("click", () => { SELECTED_MONTH = b.dataset.month; renderMonth(SELECTED_MONTH, today); });
+  });
+}
+
+function renderMonth(ym, today) {
+  $("mesTabs").querySelectorAll(".mes-tab").forEach((b) => b.classList.toggle("active", b.dataset.month === ym));
   const list = $("eventsList");
-  const events = data.events || [];
-  if (!events.length) { list.innerHTML = `<div class="empty">Aún no hay eventos. ${IS_ADMIN ? "Crea el primero." : ""}</div>`; return; }
-  list.innerHTML = events.map((ev) => {
+  const evs = ALL_EVENTS.filter((e) => e.fecha.slice(0, 7) === ym);
+  if (!evs.length) { list.innerHTML = `<div class="empty">Sin actividades este mes.</div>`; return; }
+  list.innerHTML = evs.map((ev) => {
     const f = fmtFecha(ev.fecha);
-    return `<div class="card event-card">
+    return `<div class="card event-card ${ev.fecha === today ? "hoy" : ""}">
       <div class="event-date"><span class="d">${f.d}</span><span class="m">${f.mes}</span></div>
       <div style="flex:1">
         <div style="display:flex;gap:.6rem;align-items:center;flex-wrap:wrap">
-          <h3 style="font-size:1.2rem">${escapeHtml(ev.titulo)}</h3>
-          <span class="badge ${ev.tipo === "especial" ? "especial" : "normal"}">${ev.tipo === "especial" ? "Especial" : "Evento"}</span>
+          <h3 style="font-size:1.15rem">${escapeHtml(ev.titulo)}</h3>
+          ${ev.tipo === "especial" ? '<span class="badge especial">Especial</span>' : ""}
           ${ev.hora ? `<span class="sub">🕒 ${escapeHtml(ev.hora)}</span>` : ""}
+          ${ev.fecha === today ? '<span class="badge admin">Hoy</span>' : ""}
         </div>
         ${ev.descripcion ? `<p class="sub" style="margin:.3rem 0 0">${escapeHtml(ev.descripcion)}</p>` : ""}
       </div>
       ${IS_ADMIN ? `<div class="actions">
-        <button class="btn btn-ghost btn-sm" onclick='editEvent(${JSON.stringify(ev)})'>Editar</button>
+        <button class="btn btn-ghost btn-sm" onclick='editEvent(${JSON.stringify(ev).replace(/'/g, "&#39;")})'>Editar</button>
         <button class="btn btn-danger btn-sm" onclick="removeEvent(${ev.id})">Borrar</button>
       </div>` : ""}
     </div>`;

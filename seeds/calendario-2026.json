@@ -1,0 +1,1754 @@
+[
+  {
+    "fecha": "2026-01-03",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-03",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-04",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-04",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-05",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-01-07",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-10",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-10",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-11",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-14",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-16",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-01-17",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-17",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-18",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-21",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-24",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-24",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-24",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-01-25",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-28",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-30",
+    "titulo": "Vigilia congregacional",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-01-31",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-01-31",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-01",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-02",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-02-04",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-07",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-07",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-08",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-08",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-11",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-13",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-02-14",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-14",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-15",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-18",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-21",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-21",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-22",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-25",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-27",
+    "titulo": "Vigilia congregacional",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-02-28",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-28",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-02-28",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-03-01",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-02",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-03-04",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-07",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-07",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-08",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-08",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-11",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-13",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-03-14",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-14",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-15",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-18",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-21",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-21",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-22",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-25",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-27",
+    "titulo": "Vigilia congregacional",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-03-28",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-28",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-03-28",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-03-29",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-02",
+    "titulo": "Serie \"Yo soy el que soy\"",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-04-03",
+    "titulo": "Serie \"Yo soy el que soy\"",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-04-04",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-04",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-05",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-05",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-06",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-04-08",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-11",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-11",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-12",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-15",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-18",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-18",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-18",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-04-19",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-22",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-24",
+    "titulo": "Vigilia congregacional",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-04-25",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-25",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-26",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-29",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-04-29",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-02",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-02",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-03",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-03",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-04",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-05-06",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-09",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-09",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-10",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-13",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-15",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-05-16",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-16",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-17",
+    "titulo": "Día de la Madre",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-05-17",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-20",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-23",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-23",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-23",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-05-24",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-27",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-29",
+    "titulo": "Vigilia congregacional",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-05-30",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-05-30",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-01",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-06-03",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-05",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-06",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-06",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-07",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-07",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-08",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-06-10",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-12",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-13",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-13",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-14",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-17",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-19",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-20",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-20",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-20",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-06-21",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-24",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-26",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-26",
+    "titulo": "Vigilia congregacional",
+    "hora": "9:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-06-27",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-27",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-06-28",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-01",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-04",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-04",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-05",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-05",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-06",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-07-08",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-10",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-11",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-11",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-12",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-13",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-07-15",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-17",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-18",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-18",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-18",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-07-19",
+    "titulo": "Oración por Colombia",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-07-19",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-22",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-24",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-25",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-25",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-26",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-29",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-31",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-07-31",
+    "titulo": "Vigilia congregacional",
+    "hora": "9:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-08-01",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-01",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-02",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-02",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-03",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-08-05",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-07",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-08",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-08",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-09",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-10",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-08-12",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-14",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-15",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-15",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-16",
+    "titulo": "Día de la Familia",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-08-16",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-19",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-21",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-22",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-22",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-22",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-08-23",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-26",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-28",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-28",
+    "titulo": "Vigilia congregacional",
+    "hora": "9:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-08-29",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-08-29",
+    "titulo": "Día de cometas",
+    "hora": "3:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-09-02",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-05",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-05",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-06",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-06",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-07",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-09-09",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-11",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-12",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-12",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-13",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-14",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-09-16",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-18",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-19",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-19",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-19",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-09-20",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-23",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-25",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-25",
+    "titulo": "Vigilia congregacional",
+    "hora": "9:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-09-26",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-26",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-27",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-09-30",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-03",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-03",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-04",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-04",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-05",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-10-07",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-09",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-10",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-10",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-11",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-12",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-10-14",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-16",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-17",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-17",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-18",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-21",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-23",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-24",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-24",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-24",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-10-25",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-28",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-30",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-10-30",
+    "titulo": "Vigilia congregacional",
+    "hora": "9:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-10-31",
+    "titulo": "Día de la Biblia",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-11-01",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-02",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-11-04",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-06",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-07",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-07",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-08",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-08",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-09",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-11-11",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-13",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-14",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-14",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-15",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-18",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-20",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-21",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-21",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-22",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-25",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-27",
+    "titulo": "Escuela de música",
+    "hora": "7:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-27",
+    "titulo": "Vigilia congregacional",
+    "hora": "9:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-11-28",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-28",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-11-28",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-11-29",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-02",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-05",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-05",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-06",
+    "titulo": "Canasta del Amor",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-06",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-07",
+    "titulo": "Semana de oración",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-12-09",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-12",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-12",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-13",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-14",
+    "titulo": "Reunión de líderes",
+    "hora": "7:00 PM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-12-16",
+    "titulo": "Regalo prometido",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-12-17",
+    "titulo": "Regalo prometido",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-12-18",
+    "titulo": "Regalo prometido",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-12-19",
+    "titulo": "Regalo prometido",
+    "hora": null,
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-12-20",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-23",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-26",
+    "titulo": "Ayuno",
+    "hora": "10:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-26",
+    "titulo": "Reunión de jóvenes",
+    "hora": "4:00 PM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-26",
+    "titulo": "Oración 24 horas",
+    "hora": "6:00 AM",
+    "tipo": "especial"
+  },
+  {
+    "fecha": "2026-12-27",
+    "titulo": "Escuela Dominical",
+    "hora": "9:00 AM",
+    "tipo": "normal"
+  },
+  {
+    "fecha": "2026-12-30",
+    "titulo": "Servicio de oración y guerra espiritual",
+    "hora": null,
+    "tipo": "normal"
+  }
+]

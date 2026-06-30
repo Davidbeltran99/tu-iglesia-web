@@ -15,6 +15,7 @@ fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
 function emptyData() {
   return {
     seq: { ministerios: 0, users: 0, events: 0, members: 0 },
+    meta: {},
     ministerios: [],
     users: [],
     events: [],
@@ -201,6 +202,35 @@ function deleteEvent(id) {
   if (removed) save();
   return removed;
 }
+function importEvents(list = []) {
+  let n = 0;
+  list.forEach((e) => {
+    if (!e || !e.titulo || !e.fecha) return;
+    data.events.push({
+      id: nextId("events"),
+      titulo: e.titulo,
+      descripcion: e.descripcion || null,
+      fecha: e.fecha,
+      hora: e.hora || null,
+      tipo: e.tipo === "especial" ? "especial" : "normal",
+      creado_por: null,
+      created_at: nowISO(),
+    });
+    n++;
+  });
+  if (n) save();
+  return n;
+}
+
+/* ---------- Meta / flags ---------- */
+function getFlag(key) {
+  return data.meta ? data.meta[key] : undefined;
+}
+function setFlag(key, val) {
+  data.meta = data.meta || {};
+  data.meta[key] = val;
+  save();
+}
 
 /* ---------- Members (personas) ---------- */
 function hydrateMember(m) {
@@ -258,6 +288,7 @@ module.exports = {
   slugify,
   listMinisterios, getMinisterioById, createMinisterio, updateMinisterio, deleteMinisterio,
   hydrateUser, getUserByEmailRaw, getUserById, getUserRawById, createUser, listUsers, updateUser, deleteUser, countAdmins,
-  listEvents, getEventById, createEvent, updateEvent, deleteEvent,
+  listEvents, getEventById, createEvent, updateEvent, deleteEvent, importEvents,
+  getFlag, setFlag,
   listMembers, getMemberById, createMember, updateMember, deleteMember,
 };

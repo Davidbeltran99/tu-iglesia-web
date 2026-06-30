@@ -5,6 +5,7 @@
    ========================================================= */
 
 const path = require("path");
+const fs = require("fs");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 
@@ -49,6 +50,22 @@ function seedAdmin() {
   console.log(`[seed] Administrador creado: ${email}`);
 }
 seedAdmin();
+
+/* ---------- Importación del calendario 2026 (una sola vez) ---------- */
+function seedCalendar() {
+  if (db.getFlag("calendarSeeded")) return;
+  try {
+    const p = path.join(__dirname, "seeds", "calendario-2026.json");
+    if (!fs.existsSync(p)) return;
+    const list = JSON.parse(fs.readFileSync(p, "utf8"));
+    const n = db.importEvents(list);
+    db.setFlag("calendarSeeded", true);
+    console.log(`[seed] Calendario 2026 importado: ${n} actividades`);
+  } catch (e) {
+    console.error("[seed] No se pudo importar el calendario:", e.message);
+  }
+}
+seedCalendar();
 
 /* ===================== API ===================== */
 
