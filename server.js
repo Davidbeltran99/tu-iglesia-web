@@ -37,17 +37,32 @@ function seedAdmin() {
     return;
   }
   const existing = db.getUserByEmailRaw(email);
-  if (existing) return;
-  const pastoral = db.listMinisterios().find((m) => m.slug === "pastoral");
-  db.createUser({
-    nombre,
-    email,
-    password_hash: hashPassword(password),
-    role: "admin",
-    ministerio_id: pastoral ? pastoral.id : null,
-    estado: "active",
-  });
-  console.log(`[seed] Administrador creado: ${email}`);
+  if (!existing) {
+    const pastoral = db.listMinisterios().find((m) => m.slug === "pastoral");
+    db.createUser({
+      nombre,
+      email,
+      password_hash: hashPassword(password),
+      role: "admin",
+      ministerio_id: pastoral ? pastoral.id : null,
+      estado: "active",
+    });
+    console.log(`[seed] Administrador creado: ${email}`);
+    return;
+  }
+  // Ya existe: lo mantenemos como admin activo y SINCRONIZAMOS la contraseña
+  // con ADMIN_PASSWORD. Así, si el pastor la olvida, basta con poner una nueva
+  // en Railway y volver a desplegar.
+  const fields = {};
+  if (existing.role !== "admin") fields.role = "admin";
+  if (existing.estado !== "active") fields.estado = "active";
+  if (!verifyPassword(password, existing.password_hash)) {
+    fields.password_hash = hashPassword(password);
+  }
+  if (Object.keys(fields).length) {
+    db.updateUser(existing.id, fields);
+    console.log(`[seed] Administrador sincronizado (rol/estado/contraseña): ${email}`);
+  }
 }
 seedAdmin();
 
